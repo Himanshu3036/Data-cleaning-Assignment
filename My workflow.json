@@ -1,0 +1,87 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "2bff1dbb-1965-4ab9-bd75-f11ecffbdc22",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "e62443ad-e9ad-40e7-bf0f-ee9b383649be",
+      "name": "Webhook1",
+      "webhookId": "2bff1dbb-1965-4ab9-bd75-f11ecffbdc22"
+    },
+    {
+      "parameters": {
+        "jsCode": "const KNOWN_PEOPLE = [{\"name\": \"Tanvi Gupta\", \"email\": \"tanvi.gupta31@example.com\", \"phone\": \"9000000254\"}, {\"name\": \"Manish Reddy\", \"email\": \"manish.reddy73@example.com\", \"phone\": \"9000000237\"}, {\"name\": \"Priya Singh\", \"email\": \"priya.singh61@mailtest.example.org\", \"phone\": \"9000000287\"}, {\"name\": \"Vikram Saxena\", \"email\": \"vikram.saxena60@example.com\", \"phone\": \"9000000113\"}, {\"name\": \"Amit Agarwal\", \"email\": \"amit.agarwal3@mailtest.example.org\", \"phone\": \"9000000288\"}, {\"name\": \"Sahil Malhotra\", \"email\": \"sahil.malhotra1@example.in\", \"phone\": \"9000000143\"}, {\"name\": \"Shreya Gupta\", \"email\": \"shreya.gupta85@example.com\", \"phone\": \"9000000227\"}, {\"name\": \"Isha Chopra\", \"email\": \"isha.chopra95@mailtest.example.org\", \"phone\": \"9000000138\"}, {\"name\": \"Priya Nair\", \"email\": \"priya.nair70@example.com\", \"phone\": \"9000000222\"}, {\"name\": \"Rohit Mishra\", \"email\": \"rohit.mishra70@mailtest.example.org\", \"phone\": \"9000000167\"}, {\"name\": \"Rahul Malhotra\", \"email\": \"rahul.malhotra69@mailtest.example.org\", \"phone\": \"9000000260\"}, {\"name\": \"Rahul Jain\", \"email\": \"rahul.jain34@example.in\", \"phone\": \"9000000114\"}, {\"name\": \"Nikhil Malhotra\", \"email\": \"nikhil.malhotra41@example.in\", \"phone\": \"9000000145\"}, {\"name\": \"Karan Bhatia\", \"email\": \"karan.bhatia32@mailtest.example.org\", \"phone\": \"9000000211\"}, {\"name\": \"Ritu Sharma\", \"email\": \"ritu.sharma23@mailtest.example.org\", \"phone\": \"9000000146\"}, {\"name\": \"Arjun Mishra\", \"email\": \"arjun.mishra70@example.com\", \"phone\": \"9000000106\"}, {\"name\": \"Meera Bhatia\", \"email\": \"meera.bhatia52@mailtest.example.org\", \"phone\": \"9000000223\"}, {\"name\": \"Varun Jain\", \"email\": \"varun.jain29@example.com\", \"phone\": \"9000000263\"}, {\"name\": \"Arjun Mehta\", \"email\": \"arjun.mehta9@example.in\", \"phone\": \"9000000131\"}, {\"name\": \"Kavya Mehta\", \"email\": \"kavya.mehta7@example.com\", \"phone\": \"9000000177\"}, {\"name\": \"Sneha Chopra\", \"email\": \"sneha.chopra99@example.in\", \"phone\": \"9000000162\"}, {\"name\": \"Deepak Mehta\", \"email\": \"deepak.mehta86@example.in\", \"phone\": \"9000000116\"}, {\"name\": \"Pooja Gupta\", \"email\": \"pooja.gupta57@mailtest.example.org\", \"phone\": \"9000000271\"}, {\"name\": \"Rohit Verma\", \"email\": \"rohit.verma13@mailtest.example.org\", \"phone\": \"9000000294\"}, {\"name\": \"Sneha Mishra\", \"email\": \"sneha.mishra14@mailtest.example.org\", \"phone\": \"9000000229\"}, {\"name\": \"Nikhil Chopra\", \"email\": \"alt.nikhil.chopra70@example.com\", \"phone\": \"9000000103\"}, {\"name\": \"Priya Saxena\", \"email\": \"priya.saxena61@example.com\", \"phone\": \"9000000231\"}, {\"name\": \"Varun Saxena\", \"email\": \"varun.saxena21@example.in\", \"phone\": \"9000000170\"}, {\"name\": \"Gaurav Mehta\", \"email\": \"gaurav.mehta79@mailtest.example.org\", \"phone\": \"9000000133\"}, {\"name\": \"Rohit Nair\", \"email\": \"rohit.nair32@mailtest.example.org\", \"phone\": \"9000000268\"}, {\"name\": \"Deepak Nair\", \"email\": \"deepak.nair44@example.com\", \"phone\": \"9000000296\"}, {\"name\": \"Rahul Chopra\", \"email\": \"rahul.chopra70@example.com\", \"phone\": \"9000000137\"}, {\"name\": \"Deepak Singh\", \"email\": \"deepak.singh36@mailtest.example.org\", \"phone\": \"9000000202\"}, {\"name\": \"Amit Reddy\", \"email\": \"amit.reddy9@mailtest.example.org\", \"phone\": \"9000000165\"}, {\"name\": \"Nikhil Chopra\", \"email\": \"nikhil.chopra70@example.com\", \"phone\": \"9000000103\"}, {\"name\": \"Tanvi Agarwal\", \"email\": \"tanvi.agarwal97@example.in\", \"phone\": \"9000000148\"}, {\"name\": \"Nikhil Mehta\", \"email\": \"nikhil.mehta5@example.com\", \"phone\": \"9000000104\"}, {\"name\": \"Isha Kapoor\", \"email\": \"isha.kapoor54@example.com\", \"phone\": \"9000000295\"}, {\"name\": \"Arjun Bhatia\", \"email\": \"arjun.bhatia14@example.com\", \"phone\": \"9000000212\"}, {\"name\": \"Isha Sharma\", \"email\": \"isha.sharma15@example.com\", \"phone\": \"9000000259\"}, {\"name\": \"Neha Bhatia\", \"email\": \"neha.bhatia60@mailtest.example.org\", \"phone\": \"9000000273\"}, {\"name\": \"Arjun Mehta\", \"email\": null, \"phone\": null}, {\"name\": \"Manish Bhatia\", \"email\": null, \"phone\": null}, {\"name\": \"Isha.Chopra95@Mailtest.Example.Org\", \"email\": null, \"phone\": null}, {\"name\": \"Divya Chopra\", \"email\": null, \"phone\": null}, {\"name\": \"Karan Chopra\", \"email\": null, \"phone\": null}, {\"name\": \"Vikram Mehta\", \"email\": null, \"phone\": null}, {\"name\": \"Pooja Kapoor\", \"email\": null, \"phone\": null}, {\"name\": \"Kavya Verma\", \"email\": null, \"phone\": null}, {\"name\": \"Tanvi Reddy\", \"email\": null, \"phone\": null}, {\"name\": \"Varun Singh\", \"email\": null, \"phone\": null}, {\"name\": \"Tanvi Kapoor\", \"email\": null, \"phone\": null}, {\"name\": \"Nikhil Nair\", \"email\": null, \"phone\": null}, {\"name\": \"Pooja Reddy\", \"email\": null, \"phone\": null}, {\"name\": \"Tanvi Sharma\", \"email\": null, \"phone\": null}, {\"name\": \"Deepak Nair\", \"email\": null, \"phone\": null}, {\"name\": \"Anjali Agarwal\", \"email\": null, \"phone\": null}, {\"name\": \"Arjun Mehta\", \"email\": null, \"phone\": \"9000000272\"}, {\"name\": \"Manish Bhatia\", \"email\": null, \"phone\": \"9000000161\"}, {\"name\": \"Divya Chopra\", \"email\": null, \"phone\": \"9000000111\"}, {\"name\": \"Karan Chopra\", \"email\": null, \"phone\": \"9000000245\"}, {\"name\": \"Vikram Mehta\", \"email\": null, \"phone\": \"9000000261\"}];\n// Naya data jo webhook se aaya hai (agar test kar rahe ho bina webhook ke, to fallback test data use hoga)\nlet input;\ntry {\n  input = $input.first().json;\n} catch (e) {\ninput = { name: \"Tanvi Gupta\", email: \"tanvi.gupta31@example.com\", phone: \"9000000254\" };\n}\nconst data = input.body || input;\n\nconst newEmail = (data.email || '').toString().trim().toLowerCase();\nconst newPhone = (data.phone || '').toString().replace(/\\D/g, '').slice(-10);\nconst newName = data.name || 'Unknown';\n\n// Check karo kya ye email ya phone already KNOWN_PEOPLE mein hai\nconst match = KNOWN_PEOPLE.find(p => {\n  const existingEmail = (p.email || '').toString().trim().toLowerCase();\n  const existingPhone = (p.phone || '').toString().replace(/\\D/g, '').slice(-10);\n  return (newEmail && existingEmail === newEmail) || (newPhone && existingPhone === newPhone);\n});\n\nif (match) {\n  return [{\n    json: {\n      isDuplicate: true,\n      message: `Duplicate found: \"${newName}\" matches existing record \"${match.name}\" (${match.email})`,\n      submittedName: newName,\n      matchedName: match.name\n    }\n  }];\n} else {\n  return [{\n    json: {\n      isDuplicate: false,\n      message: `New person: \"${newName}\" not found in database.`,\n      submittedName: newName\n    }\n  }];\n}"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        0
+      ],
+      "id": "e8f21c32-63a7-4142-9d7a-c0df34e3b996",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        672,
+        0
+      ],
+      "id": "c3f0fd20-f716-4756-9b36-741748afa899",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "3b8bf06b-8aed-4f8d-97b4-4132c9392f06",
+  "meta": {
+    "instanceId": "06d1d44168f4a0bdf60780666bd15377ca7f006976a94c6bff4605af8d30a3d1"
+  },
+  "nodeGroups": [],
+  "id": "nX6h5ArvT6q5ZDJq",
+  "tags": []
+}
