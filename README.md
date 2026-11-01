@@ -1,4 +1,4 @@
-# ConsultBae Assignment
+# Data Cleaning and audio App Project
 
 This repo has my solution for the 3 core tasks — merging the data, a no-code automation, and a small audio app.
 
